@@ -1,15 +1,11 @@
 exports.handler = async(event,context)=>{
-    context.getRemainingTimeInMillis();
+    console.log("An error occured!");
+    console.log("A log message!");
+    console.info("An informative message!");
+    console.warn("A warining meesage!");
 
-    context.functionName;   //gives name of the lambda function
-    context.functionVersion;
-    context.functionArn;
-    context.awsRequestId;
-    context.memoryLimitInMB;
-    context.identity;       //gives information about congnito identity provider
-    context.logGroupName;
-    context.logStreamName;
-    context.clientContext;    //gives additional information about client device
+    const error = new Error('Error occured!');
+    throw error;
 }
 
 
